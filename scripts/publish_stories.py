@@ -34,7 +34,7 @@ def main() -> int:
     if os.environ.get("SCHEDULED") == "1":
         madrid = ZoneInfo("Europe/Madrid")
         now = dt.datetime.now(madrid)
-        if not (dt.time(20, 40) <= now.time() < dt.time(22, 10)):
+        if not (dt.time(21, 0) <= now.time() < dt.time(22, 30)):
             print(f"Fuori orario ({now:%H:%M} a Madrid), salto.")
             return 0
         if any(h.get("published_at") and dt.datetime.fromisoformat(h["published_at"]).astimezone(madrid).date()

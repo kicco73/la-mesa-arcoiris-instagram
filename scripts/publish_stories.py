@@ -3,15 +3,20 @@
 
 Le storie restano nell'archivio di Instagram: da lì si raggruppano in highlight dall'app
 (l'API non permette di creare highlight). Pubblica gli highlight in ordine, tutte le storie
-di un highlight di fila, fino a MAX_STORIES per esecuzione (il limite Instagram è ~100 in 24 ore).
-Variabili: IG_ACCESS_TOKEN, RAW_BASE, MAX_STORIES (default 40), DRY_RUN.
+di un highlight di fila, fino a MAX_STORIES per esecuzione e MAX_HIGHLIGHTS highlight.
+Avviato dal workflow giornaliero (SCHEDULED=1) pubblica un solo highlight al giorno, nella stessa
+finestra oraria del post, così i follower vedono poche storie per volta.
+Variabili: IG_ACCESS_TOKEN, RAW_BASE, MAX_STORIES (default 40), MAX_HIGHLIGHTS, SCHEDULED, DRY_RUN.
 """
+import datetime as dt
 import json
 import os
 import sys
 import time
 
 import requests
+
+from zoneinfo import ZoneInfo
 
 from publish import ROOT, ApiError, call, wait_ready
 
@@ -25,6 +30,17 @@ def main() -> int:
     path = ROOT / "data/highlights.json"
     highlights = json.loads(path.read_text())
     queue = [h for h in highlights if h["approved"] and h["status"] != "published"]
+    queue = queue[:int(os.environ.get("MAX_HIGHLIGHTS", "100"))]
+    if os.environ.get("SCHEDULED") == "1":
+        madrid = ZoneInfo("Europe/Madrid")
+        now = dt.datetime.now(madrid)
+        if not (dt.time(20, 40) <= now.time() < dt.time(22, 10)):
+            print(f"Fuori orario ({now:%H:%M} a Madrid), salto.")
+            return 0
+        if any(h.get("published_at") and dt.datetime.fromisoformat(h["published_at"]).astimezone(madrid).date()
+               == now.date() for h in highlights):
+            print("Oggi è già stato pubblicato un highlight, salto.")
+            return 0
     if not queue:
         print("Nessun highlight approvato da pubblicare.")
         return 0
@@ -64,6 +80,7 @@ def main() -> int:
             budget -= 1
         if not dry:
             h["status"] = "published"
+            h["published_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
             path.write_text(json.dumps(highlights, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
             print(f"Pubblicato highlight {h['title']}: {len(files)} storie")
     return 0

@@ -2,10 +2,10 @@ name: Pubblica su Instagram
 
 on:
   schedule:
-    # Il cron di GitHub è in UTC: 17:30 UTC = 19:30 con l'ora legale, 18:30 UTC = 19:30 senza.
-    # publish.py procede solo se a Madrid è tra le 19:30 e le 21:00 e oggi non ha già pubblicato.
-    - cron: "30 17 * * *"
-    - cron: "30 18 * * *"
+    # Il cron di GitHub è in UTC: 18:40 UTC = 20:40 con l'ora legale, 19:40 UTC = 20:40 senza.
+    # publish.py procede solo se a Madrid è tra le 20:40 e le 22:10 e oggi non ha già pubblicato.
+    - cron: "40 18 * * *"
+    - cron: "40 19 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

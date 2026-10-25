@@ -56,6 +56,37 @@ def contain(img: Image.Image) -> Image.Image:
     return bg
 
 
+def enhance(img: Image.Image) -> Image.Image:
+    """Correzione leggera: contrasto automatico, un po' di colore e nitidezza."""
+    img = ImageOps.autocontrast(img, cutoff=(0.5, 0.5), preserve_tone=True)
+    img = ImageEnhance.Color(img).enhance(1.12)
+    img = ImageEnhance.Contrast(img).enhance(1.04)
+    return img.filter(ImageFilter.UnsharpMask(radius=1.5, percent=60, threshold=3))
+
+
+_LOGO = None
+
+
+def add_logo(img: Image.Image) -> Image.Image:
+    """Logo in basso a destra, con un'ombra morbida per leggerlo anche su fondi chiari."""
+    global _LOGO
+    if _LOGO is None:
+        logo = Image.open(ROOT / "assets" / "logo.png").convert("RGBA")
+        w = 190
+        logo = logo.resize((w, round(logo.height * w / logo.width)), Image.LANCZOS)
+        pad = 16
+        shadow = Image.new("RGBA", (logo.width + 2 * pad, logo.height + 2 * pad), (0, 0, 0, 0))
+        alpha = logo.getchannel("A").point(lambda a: a * 0.55)
+        shadow.paste((0, 0, 0, 255), (pad, pad + 2), alpha)
+        shadow = shadow.filter(ImageFilter.GaussianBlur(7))
+        shadow.alpha_composite(logo, (pad, pad))
+        _LOGO = shadow
+    out = img.convert("RGBA")
+    margin = 28
+    out.alpha_composite(_LOGO, (W - _LOGO.width - margin, H - _LOGO.height - margin))
+    return out.convert("RGB")
+
+
 def main() -> int:
     posts = json.loads((ROOT / "data/posts.json").read_text())
     errors = 0
@@ -67,15 +98,15 @@ def main() -> int:
         wanted = {}
         for n, photo in enumerate(post["photos"], start=1):
             name = f"{n}.jpg"
-            key = f'{photo["src"]}|{photo["fit"]}|v2'
+            key = f'{photo["src"]}|{photo["fit"]}|v3'
             wanted[name] = key
             if manifest.get(name) == key and (folder / name).exists():
                 continue
             try:
-                img = load(photo["src"])
+                img = enhance(load(photo["src"]))
                 # una foto orizzontale ritagliata a 4:5 perde le persone ai lati: la teniamo intera
                 use_cover = photo["fit"] == "cover" and img.width / img.height < 0.95
-                out = cover(img) if use_cover else contain(img)
+                out = add_logo(cover(img) if use_cover else contain(img))
                 out.save(folder / name, "JPEG", quality=90, optimize=True, progressive=False)
                 print(f"ok   {post['id']}/{name}")
             except Exception as exc:  # una foto rotta non deve bloccare le altre

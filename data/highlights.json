@@ -61,9 +61,11 @@
    "https://secure.meetupstatic.com/photos/event/c/6/9/a/highres_533030842.jpeg"
   ],
   "approved": true,
-  "status": "pending",
+  "status": "published",
   "ig_story_ids": [
-   "17915427762533368"
+   "17915427762533368",
+   "18132993661763878",
+   "18169624819472165"
   ]
  },
  {
@@ -75,8 +77,11 @@
    "https://secure.meetupstatic.com/photos/event/7/5/2/7/highres_531689991.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "18487483537129062",
+   "18331141867263773"
+  ]
  },
  {
   "venue": "bocachancla",
@@ -90,8 +95,14 @@
    "https://secure.meetupstatic.com/photos/event/c/4/3/highres_533883139.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "17975668416171402",
+   "17911431552570230",
+   "18117303656516866",
+   "18387458695227563",
+   "18128002798886349"
+  ]
  },
  {
   "venue": "romana",
@@ -103,8 +114,12 @@
    "https://secure.meetupstatic.com/photos/event/5/4/9/f/highres_530541663.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "18120139820008159",
+   "18198313159388295",
+   "18643607089056983"
+  ]
  },
  {
   "venue": "aperegina",
@@ -117,8 +132,13 @@
    "https://secure.meetupstatic.com/photos/event/e/7/a/e/highres_530699310.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "18189346546414787",
+   "18089846807695249",
+   "17972622423171984",
+   "18127319588477069"
+  ]
  },
  {
   "venue": "federica",
@@ -130,8 +150,12 @@
    "https://secure.meetupstatic.com/photos/event/2/5/c/highres_531180604.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "17963550846238220",
+   "18108323471359863",
+   "18135349867736834"
+  ]
  },
  {
   "venue": "delias",
@@ -143,8 +167,12 @@
    "https://secure.meetupstatic.com/photos/event/a/9/2/6/highres_530563302.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "17927557107428363",
+   "18014433974987429",
+   "18130121164864561"
+  ]
  },
  {
   "venue": "foz",

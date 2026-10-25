@@ -38,7 +38,7 @@ def main() -> int:
         for name in todo:
             url = f"{raw_base}/stories/{h['venue']}/{name}"
             if requests.head(url, timeout=30).status_code != 200:
-                print(f"ERRORE immagine non raggiungibile: {url}", file=sys.stderr)
+                print(f"::error::ERRORE immagine non raggiungibile: {url}", file=sys.stderr)
                 return 1
             if dry:
                 print(f"[dry-run] {h['title']} {name}")
@@ -48,7 +48,7 @@ def main() -> int:
                 wait_ready(cid, token)
                 sid = call("POST", f"{ig_user}/media_publish", token, creation_id=cid)["id"]
             except ApiError as exc:
-                print(f"ERRORE {h['title']} {name}: {exc}", file=sys.stderr)
+                print(f"::error::ERRORE {h['title']} {name}: {exc}", file=sys.stderr)
                 return 1
             h["ig_story_ids"].append(sid)
             path.write_text(json.dumps(highlights, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -61,4 +61,8 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as exc:  # errore visibile come annotazione del workflow
+        print(f"::error::{type(exc).__name__}: {exc}")
+        raise

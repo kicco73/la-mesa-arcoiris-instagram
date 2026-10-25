@@ -113,7 +113,7 @@ def main() -> int:
         try:
             media_id = publish(post, token, ig_user, raw_base, dry)
         except ApiError as exc:
-            print(f"ERRORE post {post['id']}: {exc}", file=sys.stderr)
+            print(f"::error::ERRORE post {post['id']}: {exc}", file=sys.stderr)
             return 1
         if media_id:
             post.update(status="published", ig_media_id=media_id,
@@ -124,4 +124,8 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as exc:  # errore visibile come annotazione del workflow
+        print(f"::error::{type(exc).__name__}: {exc}")
+        raise

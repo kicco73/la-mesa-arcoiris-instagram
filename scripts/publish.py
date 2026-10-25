@@ -15,6 +15,7 @@ import os
 import pathlib
 import sys
 import time
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -84,6 +85,19 @@ def main() -> int:
 
     path = ROOT / "data/posts.json"
     posts = json.loads(path.read_text())
+
+    if os.environ.get("SCHEDULED") == "1":
+        madrid = ZoneInfo("Europe/Madrid")
+        now = dt.datetime.now(madrid)
+        if not (dt.time(19, 30) <= now.time() < dt.time(21, 0)):
+            print(f"Fuori orario ({now:%H:%M} a Madrid), salto.")
+            return 0
+        today = [p for p in posts if p.get("published_at")
+                 and dt.datetime.fromisoformat(p["published_at"]).astimezone(madrid).date() == now.date()]
+        if today:
+            print("Oggi è già stato pubblicato un post, salto.")
+            return 0
+
     queue = sorted((p for p in posts if p["approved"] and p["status"] == "pending"), key=lambda p: p["order"])
     if not queue:
         print("Nessun post approvato in attesa.")

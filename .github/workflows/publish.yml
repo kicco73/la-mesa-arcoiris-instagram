@@ -2,7 +2,10 @@ name: Pubblica su Instagram
 
 on:
   schedule:
-    - cron: "13 18 * * *"  # ogni giorno 19:13 ora di Madrid (20:13 con l'ora legale)
+    # Il cron di GitHub è in UTC: 17:30 UTC = 19:30 con l'ora legale, 18:30 UTC = 19:30 senza.
+    # publish.py procede solo se a Madrid è tra le 19:30 e le 21:00 e oggi non ha già pubblicato.
+    - cron: "30 17 * * *"
+    - cron: "30 18 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -31,6 +34,7 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+          SCHEDULED: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: python scripts/publish.py
       - name: Commit stato
         if: always()

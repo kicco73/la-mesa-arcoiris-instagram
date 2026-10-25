@@ -98,7 +98,7 @@ def main() -> int:
         wanted = {}
         for n, photo in enumerate(post["photos"], start=1):
             name = f"{n}.jpg"
-            key = f'{photo["src"]}|{photo["fit"]}|v3'
+            key = f'{photo["src"]}|{photo["fit"]}|v4'
             wanted[name] = key
             if manifest.get(name) == key and (folder / name).exists():
                 continue

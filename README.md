@@ -13,11 +13,12 @@ Pubblica su @la.mesa.arcoiris un post per ogni evento Meetup del gruppo, uno al 
 - `stories.yml` (avvio manuale): pubblica come storie gli highlight approvati, fino a 40 storie per esecuzione. Poi in app: Profilo → + → Highlight, scegliendo le storie dall'archivio (l'API non crea highlight).
 
 ## Configurazione
-1. Account Instagram professionale (Creator).
-2. App Meta con "Instagram API with Instagram Login", permesso `instagram_business_content_publish`; token di lunga durata.
-3. Secret del repository `IG_ACCESS_TOKEN` con il token.
-
-Il token di lunga durata scade dopo 60 giorni.
+1. Account Instagram professionale (Creator), Instagram Tester dell'app Meta "Avance" (Instagram app "Avance-IG").
+2. Permesso `instagram_business_content_publish`; redirect URL della business login: l'URL di questo repository.
+3. Secret del repository `IG_APP_SECRET` = Instagram app secret.
+4. Autorizzazione: aprire il link OAuth, copiare l'URL di ritorno (`?code=...`) e avviare `auth.yml` con quell'URL.
+   Il token (60 giorni) viene salvato cifrato in `data/token.enc` con l'app secret come chiave.
+5. `refresh-token.yml` lo rinnova il 1° e il 15 di ogni mese.
 
 ## Archivio Meetup
 L'account Meetup verrà chiuso: tutto è salvato qui.

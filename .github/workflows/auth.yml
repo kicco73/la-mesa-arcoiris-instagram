@@ -1,0 +1,37 @@
+name: Autorizza Instagram
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "URL di ritorno da Instagram (con ?code=...) o solo il codice"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  auth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Scambia il codice con un token di 60 giorni
+        env:
+          IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
+          CODE: ${{ inputs.code }}
+        run: python scripts/token_store.py auth "$CODE"
+      - name: Commit token cifrato
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/token.enc
+          git commit -m "Token Instagram aggiornato (cifrato)"
+          git pull --rebase && git push

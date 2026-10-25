@@ -9,6 +9,7 @@ Variabili: IG_ACCESS_TOKEN, RAW_BASE, MAX_STORIES (default 40), DRY_RUN.
 import json
 import os
 import sys
+import time
 
 import requests
 
@@ -43,13 +44,21 @@ def main() -> int:
             if dry:
                 print(f"[dry-run] {h['title']} {name}")
                 continue
-            try:
-                cid = call("POST", f"{ig_user}/media", token, image_url=url, media_type="STORIES")["id"]
-                wait_ready(cid, token)
-                sid = call("POST", f"{ig_user}/media_publish", token, creation_id=cid)["id"]
-            except ApiError as exc:
-                print(f"::error::ERRORE {h['title']} {name}: {exc}", file=sys.stderr)
-                return 1
+            sid = None
+            for attempt in range(1, 4):
+                try:
+                    cid = call("POST", f"{ig_user}/media", token, image_url=url, media_type="STORIES")["id"]
+                    wait_ready(cid, token)
+                    time.sleep(3)  # pubblicare subito dopo FINISHED a volte dà "Media not found"
+                    sid = call("POST", f"{ig_user}/media_publish", token, creation_id=cid)["id"]
+                    break
+                except ApiError as exc:
+                    # 2207006 "Media not found" è temporaneo: nuovo container e nuovo tentativo
+                    if "2207006" not in str(exc) or attempt == 3:
+                        print(f"::error::ERRORE {h['title']} {name}: {exc}", file=sys.stderr)
+                        return 1
+                    print(f"{h['title']} {name}: tentativo {attempt} fallito (media not found), riprovo")
+                    time.sleep(10 * attempt)
             h["ig_story_ids"].append(sid)
             path.write_text(json.dumps(highlights, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
             budget -= 1

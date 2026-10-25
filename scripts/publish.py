@@ -74,7 +74,14 @@ def publish(post: dict, token: str, ig_user: str, raw_base: str, dry: bool) -> s
         creation = call("POST", f"{ig_user}/media", token, media_type="CAROUSEL",
                         children=",".join(children), caption=post["caption"])["id"]
     wait_ready(creation, token)
-    return call("POST", f"{ig_user}/media_publish", token, creation_id=creation)["id"]
+    for attempt in range(1, 4):
+        time.sleep(3 * attempt)  # pubblicare subito dopo FINISHED a volte dà "Media not found"
+        try:
+            return call("POST", f"{ig_user}/media_publish", token, creation_id=creation)["id"]
+        except ApiError as exc:
+            if "2207006" not in str(exc) or attempt == 3:
+                raise
+            print(f"Tentativo {attempt} fallito (media not found), riprovo")
 
 
 def main() -> int:

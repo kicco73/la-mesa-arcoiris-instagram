@@ -1,0 +1,39 @@
+name: Pubblica storie highlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo controllo, non pubblicare"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  stories:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Pubblica le storie
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+        run: python scripts/publish_stories.py
+      - name: Commit stato
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/highlights.json
+          git diff --cached --quiet || { git commit -m "Storie pubblicate"; git pull --rebase; git push; }

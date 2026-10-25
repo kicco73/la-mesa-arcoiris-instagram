@@ -7,6 +7,11 @@ Pubblica su @la.mesa.arcoiris un post per ogni evento Meetup del gruppo, uno al 
 - `build.yml`: a ogni modifica di `posts.json` scarica le foto da Meetup e genera `images/<id>/<n>.jpg` (1080×1350).
 - `publish.yml`: ogni giorno alle 19:30 (Madrid, ora legale gestita) pubblica il prossimo post con `approved: true` e `status: pending`. Avviato a mano, di default fa solo un controllo (dry-run).
 
+## Highlight
+- `data/highlights.json`: un highlight per locale (titolo, foto, `approved`, `status`).
+- `stories/<locale>/`: `0.jpg` storia di apertura, `<n>.jpg` foto, `cover.jpg` copertina.
+- `stories.yml` (avvio manuale): pubblica come storie gli highlight approvati, fino a 40 storie per esecuzione. Poi in app: Profilo → + → Highlight, scegliendo le storie dall'archivio (l'API non crea highlight).
+
 ## Configurazione
 1. Account Instagram professionale (Creator).
 2. App Meta con "Instagram API with Instagram Login", permesso `instagram_business_content_publish`; token di lunga durata.

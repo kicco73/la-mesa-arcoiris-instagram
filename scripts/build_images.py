@@ -39,7 +39,7 @@ def load(src: str) -> Image.Image:
     return img.convert("RGB")
 
 
-def cover(img: Image.Image, y_bias: float = 0.4) -> Image.Image:
+def cover(img: Image.Image, y_bias: float = 0.4, W: int = W, H: int = H) -> Image.Image:
     scale = max(W / img.width, H / img.height)
     img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
     x = (img.width - W) // 2
@@ -47,8 +47,8 @@ def cover(img: Image.Image, y_bias: float = 0.4) -> Image.Image:
     return img.crop((x, y, x + W, y + H))
 
 
-def contain(img: Image.Image) -> Image.Image:
-    bg = cover(img, 0.5).filter(ImageFilter.GaussianBlur(40))
+def contain(img: Image.Image, W: int = W, H: int = H) -> Image.Image:
+    bg = cover(img, 0.5, W, H).filter(ImageFilter.GaussianBlur(40))
     bg = ImageEnhance.Brightness(bg).enhance(0.75)
     scale = min(W / img.width, H / img.height)
     fg = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
@@ -67,7 +67,7 @@ def enhance(img: Image.Image) -> Image.Image:
 _LOGO = None
 
 
-def add_logo(img: Image.Image) -> Image.Image:
+def add_logo(img: Image.Image, bottom: int = 28) -> Image.Image:
     """Logo in basso a destra, con un'ombra morbida per leggerlo anche su fondi chiari."""
     global _LOGO
     if _LOGO is None:
@@ -83,7 +83,7 @@ def add_logo(img: Image.Image) -> Image.Image:
         _LOGO = shadow
     out = img.convert("RGBA")
     margin = 28
-    out.alpha_composite(_LOGO, (W - _LOGO.width - margin, H - _LOGO.height - margin))
+    out.alpha_composite(_LOGO, (out.width - _LOGO.width - margin, out.height - _LOGO.height - bottom))
     return out.convert("RGB")
 
 

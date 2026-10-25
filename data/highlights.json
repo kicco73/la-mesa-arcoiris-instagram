@@ -13,8 +13,16 @@
    "https://secure.meetupstatic.com/photos/event/5/5/8/7/highres_530541895.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "17903533626600192",
+   "18117357508826367",
+   "18636332269043583",
+   "17914182447287030",
+   "18136604275732941",
+   "18106927244257360",
+   "18010155494777604"
+  ]
  },
  {
   "venue": "pummarola",
@@ -31,8 +39,17 @@
    "https://secure.meetupstatic.com/photos/event/3/7/d/7/highres_531614295.jpeg"
   ],
   "approved": true,
-  "status": "pending",
-  "ig_story_ids": []
+  "status": "published",
+  "ig_story_ids": [
+   "18120862721602425",
+   "18015382958987593",
+   "18389587246235214",
+   "18494504491129755",
+   "17908080960563200",
+   "17892442563450255",
+   "18096893834403765",
+   "18109745264229342"
+  ]
  },
  {
   "venue": "boxer",
@@ -45,7 +62,9 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [
+   "17915427762533368"
+  ]
  },
  {
   "venue": "lodecarmen",

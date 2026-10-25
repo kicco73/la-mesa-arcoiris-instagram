@@ -44,12 +44,10 @@ jobs:
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
           SCHEDULED: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: python scripts/publish.py
-      - name: Pubblica le storie di un highlight
-        if: env.IG_ACCESS_TOKEN != '' && github.event_name == 'schedule'
+      - name: Storie dell'evento pubblicato oggi
+        if: env.IG_ACCESS_TOKEN != '' && (github.event_name == 'schedule' || !inputs.dry_run)
         env:
           RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}
-          SCHEDULED: "1"
-          MAX_HIGHLIGHTS: "1"
         run: python scripts/publish_stories.py
       - name: Commit stato
         if: always()

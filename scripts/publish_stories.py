@@ -1,88 +1,99 @@
 #!/usr/bin/env python3
-"""Pubblica come storie le immagini degli highlight approvati (data/highlights.json).
+"""Pubblica come storie le foto dell'evento del post uscito oggi (data/highlights.json).
 
-Le storie restano nell'archivio di Instagram: da lì si raggruppano in highlight dall'app
-(l'API non permette di creare highlight). Pubblica gli highlight in ordine, tutte le storie
-di un highlight di fila, fino a MAX_STORIES per esecuzione e MAX_HIGHLIGHTS highlight.
-Avviato dal workflow giornaliero (SCHEDULED=1) pubblica un solo highlight al giorno, nella stessa
-finestra oraria del post, così i follower vedono poche storie per volta.
-Variabili: IG_ACCESS_TOKEN, RAW_BASE, MAX_STORIES (default 40), MAX_HIGHLIGHTS, SCHEDULED, DRY_RUN.
+Ogni locale ha un highlight. Quando esce il post di un evento, escono anche le sue storie:
+prima la storia di apertura del locale (solo la prima volta), poi le foto dell'evento.
+Gli highlight li crea e aggiorna l'attività serale dal browser (l'API non può farlo),
+usando le storie già entrate nell'archivio.
+
+Variabili: IG_ACCESS_TOKEN, RAW_BASE, DRY_RUN, EVENT_IDS (opzionale, id separati da virgola:
+se assente usa i post pubblicati oggi a Madrid).
 """
 import datetime as dt
 import json
 import os
 import sys
 import time
+from zoneinfo import ZoneInfo
 
 import requests
 
-from zoneinfo import ZoneInfo
-
 from publish import ROOT, ApiError, call, wait_ready
+
+MADRID = ZoneInfo("Europe/Madrid")
+
+
+def publish_story(url: str, token: str, ig_user: str) -> str:
+    for attempt in range(1, 4):
+        try:
+            cid = call("POST", f"{ig_user}/media", token, image_url=url, media_type="STORIES")["id"]
+            wait_ready(cid, token)
+            time.sleep(3)  # pubblicare subito dopo FINISHED a volte dà "Media not found"
+            return call("POST", f"{ig_user}/media_publish", token, creation_id=cid)["id"]
+        except ApiError as exc:
+            if "2207006" not in str(exc) or attempt == 3:  # 2207006 "Media not found" è temporaneo
+                raise
+            print(f"tentativo {attempt} fallito (media not found), riprovo")
+            time.sleep(10 * attempt)
+    raise AssertionError
+
+
+def todays_event_ids() -> list[str]:
+    today = dt.datetime.now(MADRID).date()
+    posts = json.loads((ROOT / "data/posts.json").read_text())
+    return [p["id"] for p in posts if p.get("published_at")
+            and dt.datetime.fromisoformat(p["published_at"]).astimezone(MADRID).date() == today]
 
 
 def main() -> int:
     token = os.environ["IG_ACCESS_TOKEN"]
     raw_base = os.environ["RAW_BASE"].rstrip("/")
-    budget = int(os.environ.get("MAX_STORIES", "40"))
     dry = os.environ.get("DRY_RUN") == "1"
+    wanted = [x for x in os.environ.get("EVENT_IDS", "").split(",") if x] or todays_event_ids()
 
     path = ROOT / "data/highlights.json"
     highlights = json.loads(path.read_text())
-    queue = [h for h in highlights if h["approved"] and h["status"] != "published"]
-    queue = queue[:int(os.environ.get("MAX_HIGHLIGHTS", "100"))]
-    if os.environ.get("SCHEDULED") == "1":
-        madrid = ZoneInfo("Europe/Madrid")
-        now = dt.datetime.now(madrid)
-        if not (dt.time(21, 0) <= now.time() < dt.time(22, 30)):
-            print(f"Fuori orario ({now:%H:%M} a Madrid), salto.")
-            return 0
-        if any(h.get("published_at") and dt.datetime.fromisoformat(h["published_at"]).astimezone(madrid).date()
-               == now.date() for h in highlights):
-            print("Oggi è già stato pubblicato un highlight, salto.")
-            return 0
-    if not queue:
-        print("Nessun highlight approvato da pubblicare.")
+    work = [(h, ev) for h in highlights if h["approved"] for ev in h["events"]
+            if ev["id"] in wanted and ev["status"] == "pending"]
+    if not work:
+        print("Nessuna storia da pubblicare per gli eventi di oggi.")
         return 0
-    ig_user = call("GET", "me", token, fields="user_id")["user_id"]
 
-    for h in queue:
-        files = ["0.jpg"] + [f"{n}.jpg" for n in range(1, len(h["photos"]) + 1)]
-        todo = files[len(h["ig_story_ids"]):]          # riprende da dove si era fermato
-        if len(todo) > budget:
-            print(f"{h['title']}: rimandato al prossimo giro ({len(todo)} storie, budget {budget})")
-            break
-        for name in todo:
+    def save() -> None:
+        if not dry:
+            path.write_text(json.dumps(highlights, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    ig_user = None if dry else call("GET", "me", token, fields="user_id")["user_id"]
+    now = lambda: dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")  # noqa: E731
+    for h, ev in work:
+        files = [] if h["opening_published"] else ["0.jpg"]
+        files += [f"{ev['id']}-{n}.jpg" for n in range(1, len(ev["photos"]) + 1)]
+        for name in files:
             url = f"{raw_base}/stories/{h['venue']}/{name}"
             if requests.head(url, timeout=30).status_code != 200:
-                print(f"::error::ERRORE immagine non raggiungibile: {url}", file=sys.stderr)
+                print(f"::error::ERRORE immagine non raggiungibile: {url}")
                 return 1
             if dry:
                 print(f"[dry-run] {h['title']} {name}")
                 continue
-            sid = None
-            for attempt in range(1, 4):
-                try:
-                    cid = call("POST", f"{ig_user}/media", token, image_url=url, media_type="STORIES")["id"]
-                    wait_ready(cid, token)
-                    time.sleep(3)  # pubblicare subito dopo FINISHED a volte dà "Media not found"
-                    sid = call("POST", f"{ig_user}/media_publish", token, creation_id=cid)["id"]
-                    break
-                except ApiError as exc:
-                    # 2207006 "Media not found" è temporaneo: nuovo container e nuovo tentativo
-                    if "2207006" not in str(exc) or attempt == 3:
-                        print(f"::error::ERRORE {h['title']} {name}: {exc}", file=sys.stderr)
-                        return 1
-                    print(f"{h['title']} {name}: tentativo {attempt} fallito (media not found), riprovo")
-                    time.sleep(10 * attempt)
-            h["ig_story_ids"].append(sid)
-            path.write_text(json.dumps(highlights, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-            budget -= 1
+            try:
+                sid = publish_story(url, token, ig_user)
+            except ApiError as exc:
+                print(f"::error::ERRORE {h['title']} {name}: {exc}")
+                save()
+                return 1
+            if name == "0.jpg":
+                h["opening_published"] = True
+                h["opening_story_id"] = sid
+                h["opening_published_at"] = now()
+            else:
+                ev["ig_story_ids"].append(sid)
+            save()
         if not dry:
-            h["status"] = "published"
-            h["published_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
-            path.write_text(json.dumps(highlights, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-            print(f"Pubblicato highlight {h['title']}: {len(files)} storie")
+            ev["status"] = "published"
+            ev["published_at"] = now()
+            save()
+        print(f"{h['title']}: storie dell'evento {ev['id']} pubblicate ({len(files)})")
     return 0
 
 

@@ -8,9 +8,10 @@ Pubblica su @la.mesa.arcoiris un post per ogni evento Meetup del gruppo, uno al 
 - `publish.yml`: ogni giorno alle 21:00 (Madrid, ora legale gestita) pubblica il prossimo post con `approved: true` e `status: pending`. Avviato a mano, di default fa solo un controllo (dry-run).
 
 ## Highlight
-- `data/highlights.json`: un highlight per locale (titolo, foto, `approved`, `status`).
-- `stories/<locale>/`: `0.jpg` storia di apertura, `<n>.jpg` foto, `cover.jpg` copertina.
-- `stories.yml` (avvio manuale): pubblica come storie gli highlight approvati, fino a 40 storie per esecuzione. Poi in app: Profilo → + → Highlight, scegliendo le storie dall'archivio (l'API non crea highlight).
+- `data/highlights.json`: un highlight per locale; `events` = storie per evento (`pending/published/covered/none`), `opening_published` = storia di apertura già uscita.
+- `stories/<locale>/`: `0.jpg` apertura, `<evento>-<n>.jpg` foto dell'evento, `cover.jpg` copertina (`<n>.jpg`: lotto del 25/10).
+- Ogni sera, dopo il post, `publish.yml` pubblica le storie dell'evento del giorno (più l'apertura alla prima uscita del locale).
+- Gli highlight li crea/aggiorna un'attività programmata serale dal browser, con le storie già in archivio (l'API non gestisce gli highlight).
 
 ## Configurazione
 1. Account Instagram professionale (Creator), Instagram Tester dell'app Meta "Avance" (Instagram app "Avance-IG").

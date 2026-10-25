@@ -3,6 +3,10 @@ name: Pubblica storie highlight
 on:
   workflow_dispatch:
     inputs:
+      event_ids:
+        description: "Id evento (separati da virgola); vuoto = eventi pubblicati oggi"
+        required: false
+        default: ""
       dry_run:
         description: "Solo controllo, non pubblicare"
         type: boolean
@@ -37,6 +41,7 @@ jobs:
         env:
           RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          EVENT_IDS: ${{ inputs.event_ids }}
         run: python scripts/publish_stories.py
       - name: Commit stato
         if: always()

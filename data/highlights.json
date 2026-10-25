@@ -23,7 +23,98 @@
    "18106927244257360",
    "18010155494777604"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "311375208",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/2/9/2/9/highres_530650537.jpeg",
+     "https://secure.meetupstatic.com/photos/event/5/5/8/7/highres_530541895.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "311588066",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "311586591",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/c/6/7/5/highres_531170805.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "311987414",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312021793",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312296467",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312745587",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/2/7/4/c/highres_532270060.jpeg",
+     "https://secure.meetupstatic.com/photos/event/2/7/4/d/highres_532270061.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312944408",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "313218028",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "313001782",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "313831797",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314661161",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/b/6/2/highres_534122914.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "315010743",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "pummarola",
@@ -51,7 +142,50 @@
    "18096893834403765",
    "18109745264229342"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "312296514",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/8/e/2/2/highres_531756386.jpeg",
+     "https://secure.meetupstatic.com/photos/event/3/7/d/7/highres_531614295.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312745540",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/3/0/6/9/highres_533412393.jpeg",
+     "https://secure.meetupstatic.com/photos/event/3/0/6/a/highres_533412394.jpeg",
+     "https://secure.meetupstatic.com/photos/event/3/0/6/b/highres_533412395.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314088184",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "315224942",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "317007047",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/3/e/e/2/highres_536656098.jpeg",
+     "https://secure.meetupstatic.com/photos/event/3/e/e/3/highres_536656099.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "boxer",
@@ -69,7 +203,44 @@
    "18132993661763878",
    "18169624819472165"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "311926325",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/c/c/f/highres_531203759.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "313570951",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/c/6/9/a/highres_533030842.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312745615",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "313774315",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314360769",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "lodecarmen",
@@ -85,7 +256,30 @@
    "18487483537129062",
    "18331141867263773"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "312351230",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/7/5/2/7/highres_531689991.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314088435",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314088195",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "bocachancla",
@@ -107,7 +301,34 @@
    "18387458695227563",
    "18128002798886349"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "312944379",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/e/0/e/highres_532404078.jpeg",
+     "https://secure.meetupstatic.com/photos/event/c/4/a/4/highres_532910340.jpeg",
+     "https://secure.meetupstatic.com/photos/event/c/4/a/7/highres_532910343.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314360787",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/c/4/3/highres_533883139.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "315438983",
+    "photos": [],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "romana",
@@ -125,7 +346,26 @@
    "18198313159388295",
    "18643607089056983"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "311375096",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/4/9/f/highres_530541663.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "311480195",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/7/2/6/5/highres_531029285.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "aperegina",
@@ -145,7 +385,27 @@
    "17972622423171984",
    "18127319588477069"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "311508031",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/1/8/5/highres_531180389.jpeg",
+     "https://secure.meetupstatic.com/photos/event/e/7/a/e/highres_530699310.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312745506",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/3/5/9/e/highres_532273726.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "federica",
@@ -163,7 +423,26 @@
    "18108323471359863",
    "18135349867736834"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "311876205",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/2/5/c/highres_531180604.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312745472",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/3/b/d/1/highres_532275313.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "delias",
@@ -181,7 +460,26 @@
    "18014433974987429",
    "18130121164864561"
   ],
-  "published_at": "2026-10-25T19:40:00+00:00"
+  "published_at": "2026-10-25T19:40:00+00:00",
+  "opening_published": true,
+  "events": [
+   {
+    "id": "311387412",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/a/9/2/6/highres_530563302.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   },
+   {
+    "id": "312745465",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/8/b/4/6/highres_532835654.jpeg"
+    ],
+    "status": "covered",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "foz",
@@ -195,7 +493,27 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "311915233",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/d/c/c/2/highres_531896514.jpeg",
+     "https://secure.meetupstatic.com/photos/event/8/b/e/highres_531182238.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   },
+   {
+    "id": "313774308",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/a/9/d/a/highres_530563482.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "bardaixa",
@@ -207,7 +525,24 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "311926396",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/d/8/f/highres_531203951.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   },
+   {
+    "id": "314130257",
+    "photos": [],
+    "status": "none",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "bloc34",
@@ -220,7 +555,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "311704183",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/1/8/9/highres_531180393.jpeg",
+     "https://secure.meetupstatic.com/photos/event/8/b/d/e/highres_530915806.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "abasto",
@@ -233,7 +580,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "311584032",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/1/3/0/f/highres_531304879.jpeg",
+     "https://secure.meetupstatic.com/photos/event/a/7/8/3/highres_530562883.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "tootsie",
@@ -248,7 +607,21 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "312067923",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/4/d/c/b/highres_531559915.jpeg",
+     "https://secure.meetupstatic.com/photos/event/4/d/c/c/highres_531559916.jpeg",
+     "https://secure.meetupstatic.com/photos/event/4/d/c/d/highres_531559917.jpeg",
+     "https://secure.meetupstatic.com/photos/event/4/2/0/b/highres_531376907.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "maroazul",
@@ -261,7 +634,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "311913880",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/8/e/f/c/highres_531636604.jpeg",
+     "https://secure.meetupstatic.com/photos/event/2/a/7/highres_531180679.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "mangarosa",
@@ -273,7 +658,18 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "311926365",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/d/0/6/highres_531203814.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "lacarra",
@@ -286,7 +682,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "312912673",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/f/e/5/highres_532284549.jpeg",
+     "https://secure.meetupstatic.com/photos/event/3/b/d/1/highres_532275313.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "outofchina",
@@ -299,7 +707,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "312910521",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/d/e/7/highres_532404039.jpeg",
+     "https://secure.meetupstatic.com/photos/event/3/5/9/e/highres_532273726.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "elephanta",
@@ -311,7 +731,18 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "312926014",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/f/e/5/highres_532284549.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "leggenda",
@@ -324,7 +755,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "313208466",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/9/f/a/0/highres_532720864.jpeg",
+     "https://secure.meetupstatic.com/photos/event/6/9/7/4/highres_532586996.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "phohanoi",
@@ -337,7 +780,19 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "312912446",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/5/f/a/2/highres_532284482.jpeg",
+     "https://secure.meetupstatic.com/photos/event/8/6/1/1/highres_532954321.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "rioja",
@@ -349,7 +804,18 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "313111945",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/c/d/5/e/highres_532492574.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "lapala",
@@ -361,7 +827,18 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "312944436",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/1/4/1/f/highres_532445151.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  },
  {
   "venue": "fiorito",
@@ -373,6 +850,17 @@
   ],
   "approved": true,
   "status": "pending",
-  "ig_story_ids": []
+  "ig_story_ids": [],
+  "opening_published": false,
+  "events": [
+   {
+    "id": "315244753",
+    "photos": [
+     "https://secure.meetupstatic.com/photos/event/a/7/8/3/highres_530562883.jpeg"
+    ],
+    "status": "pending",
+    "ig_story_ids": []
+   }
+  ]
  }
 ]

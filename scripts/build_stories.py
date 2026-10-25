@@ -97,13 +97,17 @@ def main() -> int:
             old.unlink()
         opening(h).save(folder / "0.jpg", "JPEG", quality=90)
         highlight_cover(h).save(folder / "cover.jpg", "JPEG", quality=90)
-        for n, src in enumerate(h["photos"], start=1):
+        # <n>.jpg: lotto per locale pubblicato il 25/10; <evento>-<n>.jpg: storie per evento
+        jobs = [(f"{n}.jpg", src) for n, src in enumerate(h["photos"], start=1)]
+        jobs += [(f"{ev['id']}-{n}.jpg", src) for ev in h.get("events", [])
+                 for n, src in enumerate(ev["photos"], start=1)]
+        for name, src in jobs:
             try:
-                photo_story(src, h["title"]).save(folder / f"{n}.jpg", "JPEG", quality=90)
+                photo_story(src, h["title"]).save(folder / name, "JPEG", quality=90)
             except Exception as exc:
                 errors += 1
-                print(f"ERR  {h['venue']}/{n}: {exc}", file=sys.stderr)
-        print(f"ok   {h['venue']}: {len(h['photos']) + 1} storie")
+                print(f"ERR  {h['venue']}/{name}: {exc}", file=sys.stderr)
+        print(f"ok   {h['venue']}: {len(jobs) + 1} storie")
     print(f"fatto, errori: {errors}")
     return 1 if errors else 0
 

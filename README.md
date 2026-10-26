@@ -5,7 +5,7 @@ Pubblica su @la.mesa.arcoiris un post per ogni evento Meetup del gruppo, uno al 
 ## Come funziona
 - `data/posts.json`: coda dei post (didascalia, foto, `approved`, `status`). È la fonte di verità: si modifica qui.
 - `build.yml`: a ogni modifica di `posts.json` scarica le foto da Meetup e genera `images/<id>/<n>.jpg` (1080×1350).
-- `publish.yml`: ogni giorno alle 21:00 (Madrid, ora legale gestita) pubblica il prossimo post con `approved: true` e `status: pending`. Avviato a mano, di default fa solo un controllo (dry-run).
+- `publish.yml`: ogni giorno alle 20:00 (Madrid), avviato da un'attività programmata di Claude; cron GitHub come riserva pubblica il prossimo post con `approved: true` e `status: pending`. Avviato a mano, di default fa solo un controllo (dry-run).
 
 ## Highlight
 - `data/highlights.json`: un highlight per locale; `events` = storie per evento (`pending/published/covered/none`), `opening_published` = storia di apertura già uscita.

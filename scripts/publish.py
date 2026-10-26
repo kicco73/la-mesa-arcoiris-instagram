@@ -96,7 +96,7 @@ def main() -> int:
     if os.environ.get("SCHEDULED") == "1":
         madrid = ZoneInfo("Europe/Madrid")
         now = dt.datetime.now(madrid)
-        if not (dt.time(21, 0) <= now.time() < dt.time(22, 30)):
+        if not (dt.time(20, 0) <= now.time() < dt.time(21, 30)):
             print(f"Fuori orario ({now:%H:%M} a Madrid), salto.")
             return 0
         today = [p for p in posts if p.get("published_at")

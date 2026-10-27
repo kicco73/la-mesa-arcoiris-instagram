@@ -63,11 +63,12 @@
    }
   ],
   "approved": true,
-  "status": "pending",
-  "ig_media_id": null,
+  "status": "published",
+  "ig_media_id": "18119670373963215",
   "archived_media_ids": [
    "18106473140367285"
-  ]
+  ],
+  "published_at": "2026-10-27T20:37:27+00:00"
  },
  {
   "id": "311480195",

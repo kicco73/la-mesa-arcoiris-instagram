@@ -556,7 +556,7 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "311704183",
@@ -564,10 +564,16 @@
      "https://secure.meetupstatic.com/photos/event/1/8/9/highres_531180393.jpeg",
      "https://secure.meetupstatic.com/photos/event/8/b/d/e/highres_530915806.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "17977218324154299",
+     "17913730065555626"
+    ],
+    "published_at": "2026-10-30T19:08:05+00:00"
    }
-  ]
+  ],
+  "opening_story_id": "18130894870701876",
+  "opening_published_at": "2026-10-30T19:07:41+00:00"
  },
  {
   "venue": "abasto",

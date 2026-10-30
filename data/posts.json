@@ -1112,5 +1112,22 @@
   "approved": true,
   "status": "pending",
   "ig_media_id": null
+ },
+ {
+  "id": "317209828",
+  "order": 0,
+  "meetup_url": "https://www.meetup.com/la-mesa-arcoiris/events/317209828/",
+  "event_title": "Pizza a la Napoletana - Amigos gays de la mesa Arcoíris",
+  "event_date": "2026-10-31T21:00:00+01:00",
+  "caption": "🍕 Pizza napoletana en La Piazzetta\n\n¡Este sábado nos vamos de pizza! Os llevamos a nuestra pizzería favorita en Enric Granados para una noche de risas y buena comida. Sin pago por adelantado: al final dividimos la cuenta entre todos.\n\n📍 La Piazzetta · Carrer d'Enric Granados 48, Eixample\n🗓️ Sábado 31 de octubre de 2026 · 21:00\n\n¿Te apuntas? Inscríbete en nuestro grupo de Meetup «La Mesa Arcoíris» o escríbenos por DM 🌈\n\n#LaMesaArcoiris #GayBarcelona #AmigosGays #BarcelonaLGBT #QuedadasBarcelona #PizzaBarcelona #PizzaNapoletana",
+  "photos": [
+   {
+    "src": "https://secure.meetupstatic.com/photos/event/5/5/8/7/highres_530541895.jpeg",
+    "fit": "contain"
+   }
+  ],
+  "approved": true,
+  "status": "pending",
+  "ig_media_id": null
  }
 ]

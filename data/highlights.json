@@ -114,7 +114,8 @@
     "status": "covered",
     "ig_story_ids": []
    }
-  ]
+  ],
+  "opening_in_highlight": true
  },
  {
   "venue": "pummarola",
@@ -185,7 +186,8 @@
     "status": "covered",
     "ig_story_ids": []
    }
-  ]
+  ],
+  "opening_in_highlight": true
  },
  {
   "venue": "boxer",
@@ -365,7 +367,8 @@
     "status": "covered",
     "ig_story_ids": []
    }
-  ]
+  ],
+  "opening_in_highlight": true
  },
  {
   "venue": "aperegina",
@@ -569,11 +572,13 @@
      "17977218324154299",
      "17913730065555626"
     ],
-    "published_at": "2026-10-30T19:08:05+00:00"
+    "published_at": "2026-10-30T19:08:05+00:00",
+    "in_highlight": true
    }
   ],
   "opening_story_id": "18130894870701876",
-  "opening_published_at": "2026-10-30T19:07:41+00:00"
+  "opening_published_at": "2026-10-30T19:07:41+00:00",
+  "opening_in_highlight": true
  },
  {
   "venue": "abasto",

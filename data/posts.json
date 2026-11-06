@@ -245,8 +245,9 @@
    }
   ],
   "approved": true,
-  "status": "pending",
-  "ig_media_id": null
+  "status": "published",
+  "ig_media_id": "18119790559964588",
+  "published_at": "2026-11-06T09:01:38+00:00"
  },
  {
   "id": "311387412",

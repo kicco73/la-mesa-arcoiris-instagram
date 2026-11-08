@@ -625,7 +625,7 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "312067923",
@@ -635,10 +635,18 @@
      "https://secure.meetupstatic.com/photos/event/4/d/c/d/highres_531559917.jpeg",
      "https://secure.meetupstatic.com/photos/event/4/2/0/b/highres_531376907.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "18102523136540499",
+     "18103747667367126",
+     "18077597309754377",
+     "18121031324520319"
+    ],
+    "published_at": "2026-11-08T19:09:04+00:00"
    }
-  ]
+  ],
+  "opening_story_id": "18138763366628771",
+  "opening_published_at": "2026-11-08T19:08:07+00:00"
  },
  {
   "venue": "maroazul",

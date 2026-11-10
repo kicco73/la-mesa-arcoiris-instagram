@@ -660,7 +660,7 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "311913880",
@@ -668,10 +668,16 @@
      "https://secure.meetupstatic.com/photos/event/8/e/f/c/highres_531636604.jpeg",
      "https://secure.meetupstatic.com/photos/event/2/a/7/highres_531180679.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "17936579691413188",
+     "18102057737425340"
+    ],
+    "published_at": "2026-11-10T19:10:20+00:00"
    }
-  ]
+  ],
+  "opening_story_id": "17929644876435141",
+  "opening_published_at": "2026-11-10T19:09:53+00:00"
  },
  {
   "venue": "mangarosa",

@@ -1,0 +1,759 @@
+{
+ "source": "https://www.meetup.com/la-mesa-arcoiris/feedback-overview/",
+ "captured_at": "2026-11-14",
+ "rating": 4.9,
+ "total": 49,
+ "distribution": {
+  "5": 44,
+  "4": 4,
+  "3": 1,
+  "2": 0,
+  "1": 0
+ },
+ "attributes": [
+  {
+   "label": "Organizador acogedor",
+   "count": 33
+  },
+  {
+   "label": "Contacto con personas nuevas",
+   "count": 28
+  },
+  {
+   "label": "Entorno óptimo",
+   "count": 26
+  },
+  {
+   "label": "Sensación de seguridad",
+   "count": 26
+  },
+  {
+   "label": "Según lo descrito",
+   "count": 25
+  },
+  {
+   "label": "Asistentes inclusivos",
+   "count": 25
+  },
+  {
+   "label": "Comienzo puntual",
+   "count": 25
+  },
+  {
+   "label": "Interesante",
+   "count": 24
+  },
+  {
+   "label": "Dejó huella",
+   "count": 14
+  }
+ ],
+ "reviews": [
+  {
+   "author": "eduardo.cedeno.c",
+   "name": "Eduardo",
+   "event_id": "317209828",
+   "event_title": "Halloween: Pizza a la Napoletana - Amigos gays de la mesa Arcoíris",
+   "age": "hace 1 semana",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Juan Carlos",
+   "name": "Juan Carlos",
+   "event_id": "317007047",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 3 semanas",
+   "stars": 5,
+   "attributes": [
+    "Interesante",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Pasku",
+   "name": "Pasku",
+   "event_id": "317007047",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 3 semanas",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Darío",
+   "name": "Darío",
+   "event_id": "317007047",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 3 semanas",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ],
+   "text": "El sitio espectacular, la compañía muy agradable y el organizador se preocupó en cada momento por nosotros, muchas gracias"
+  },
+  {
+   "author": "Manu",
+   "name": "Manu",
+   "event_id": "317007047",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 3 semanas",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Entorno óptimo",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Salvo Rossi",
+   "name": "Salvo",
+   "event_id": "317007047",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 3 semanas",
+   "stars": 5,
+   "attributes": [
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Sebas RODRÍGUEZ",
+   "name": "Sebas",
+   "event_id": "317007047",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 3 semanas",
+   "stars": 5,
+   "attributes": [
+    "Interesante",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Toni",
+   "name": "Toni",
+   "event_id": "315224942",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 5 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Pasku",
+   "name": "Pasku",
+   "event_id": "315224942",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 5 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Pasku",
+   "name": "Pasku",
+   "event_id": "314088195",
+   "event_title": "Tomamos algo en Lo de Carmen - Amigos Gays de La Mesa Arcoíris",
+   "age": "hace 5 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Jonathan",
+   "name": "Jonathan",
+   "event_id": "314088195",
+   "event_title": "Tomamos algo en Lo de Carmen - Amigos Gays de La Mesa Arcoíris",
+   "age": "hace 5 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Jose Segurado",
+   "name": "Jose",
+   "event_id": "314130257",
+   "event_title": "Tardeo en Bardaixa - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 6 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "José Alberto Benítez",
+   "name": "José Alberto",
+   "event_id": "314088435",
+   "event_title": "Tomamos algo en Lo de Carmen - Amigos Gays de La Mesa Arcoíris",
+   "age": "hace 6 meses",
+   "stars": 4,
+   "attributes": []
+  },
+  {
+   "author": "Toni",
+   "name": "Toni",
+   "event_id": "314360787",
+   "event_title": "Tapeo en Bocachancla - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 6 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Pasku",
+   "name": "Pasku",
+   "event_id": "313831797",
+   "event_title": "19 Marzo: Pizza a la Napoletana - Amigos gays de la mesa Arcoíris",
+   "age": "hace 7 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "David Pinheiro",
+   "name": "David",
+   "event_id": "312912446",
+   "event_title": "Restaurante vietnamita - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 8 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Oscar",
+   "name": "Oscar",
+   "event_id": "312944379",
+   "event_title": "Tapeo en Bocachancla - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 8 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Toni",
+   "name": "Toni",
+   "event_id": "312944379",
+   "event_title": "Tapeo en Bocachancla - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 8 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Oscar",
+   "name": "Oscar",
+   "event_id": "312912446",
+   "event_title": "Restaurante vietnamita - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 8 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "David Pinheiro",
+   "name": "David",
+   "event_id": "312745465",
+   "event_title": "Restaurante Griego - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 8 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Pasku",
+   "name": "Pasku",
+   "event_id": "312926014",
+   "event_title": "Tomamos algo en La Elephanta - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 5,
+   "attributes": [
+    "Sensación de seguridad"
+   ]
+  },
+  {
+   "author": "Jorge Garcia",
+   "name": "Jorge",
+   "event_id": "312745506",
+   "event_title": "Restaurante Ape Regina - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Jesús",
+   "name": "Jesús",
+   "event_id": "312926014",
+   "event_title": "Tomamos algo en La Elephanta - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 5,
+   "attributes": [
+    "Contacto con personas nuevas",
+    "Comienzo puntual",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Jesús",
+   "name": "Jesús",
+   "event_id": "312745506",
+   "event_title": "Restaurante Ape Regina - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 5,
+   "attributes": [
+    "Contacto con personas nuevas",
+    "Comienzo puntual",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Toni",
+   "name": "Toni",
+   "event_id": "312745506",
+   "event_title": "Restaurante Ape Regina - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Jorge Garcia",
+   "name": "Jorge",
+   "event_id": "312910521",
+   "event_title": "Restaurante Out Of China - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 3,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Jorge Garcia",
+   "name": "Jorge",
+   "event_id": "311926365",
+   "event_title": "Restaurante Brasileño - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 4,
+   "attributes": []
+  },
+  {
+   "author": "Miguel",
+   "name": "Miguel",
+   "event_id": "312745587",
+   "event_title": "Pizza a la Napoletana - Amigos gays de la mesa Arcoíris",
+   "age": "hace 9 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Lluís Galbis",
+   "name": "Lluís",
+   "event_id": "311915233",
+   "event_title": "Cena de Navidad - Amigos Gays de la Mesa Arcoíris",
+   "age": "hace 10 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Derek",
+   "name": "Derek",
+   "event_id": "312296514",
+   "event_title": "AperiPizza! - Amigos Gays de la mesa Arcoíris",
+   "age": "hace 10 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Entorno óptimo",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "portapujol.xavier",
+   "name": "Xavier",
+   "event_id": "311913880",
+   "event_title": "Restaurante Mexicano - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Xaviersbd",
+   "name": "Xavier",
+   "event_id": "311913880",
+   "event_title": "Restaurante Mexicano - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Gustavo",
+   "name": "Gustavo",
+   "event_id": "312296467",
+   "event_title": "Pizza a la Napoletana - Amigos gays de la mesa Arcoíris",
+   "age": "hace 11 meses",
+   "stars": 4,
+   "attributes": [
+    "Organizador acogedor"
+   ],
+   "text": "Asistí con la espectativa de que fuera un grupo de reciente creación, pero me encontré con que ya todos se conocen.",
+   "reply": "Hola Gustavo, gracias por tu comentario. La gente que participa suele volver. La mesa Arcoíris es un proyecto que lleva tres meses, y se creó por voluntad de un grupo de personas, unas de las cuales cenamos juntos ese día. Espero verte en los próximos eventos!"
+  },
+  {
+   "author": "Darío",
+   "name": "Darío",
+   "event_id": "312296467",
+   "event_title": "Pizza a la Napoletana - Amigos gays de la mesa Arcoíris",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "312067923",
+   "event_title": "Tootsie el musical - Amigos gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Graz",
+   "name": "Graz",
+   "event_id": "311876205",
+   "event_title": "Tomamos algo en La Federica - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Miguel",
+   "name": "Miguel",
+   "event_id": "311387412",
+   "event_title": "Restaurante Griego - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": []
+  },
+  {
+   "author": "Toni",
+   "name": "Toni",
+   "event_id": "311387412",
+   "event_title": "Restaurante Griego - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "311876205",
+   "event_title": "Tomamos algo en La Federica - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "311387412",
+   "event_title": "Restaurante Griego - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ],
+   "text": "Un ambiente maravilloso y relajado para conocer gente"
+  },
+  {
+   "author": "Nono",
+   "name": "Nono",
+   "event_id": "311876205",
+   "event_title": "Tomamos algo en La Federica - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Contacto con personas nuevas",
+    "Comienzo puntual",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Jorge Garcia",
+   "name": "Jorge",
+   "event_id": "311387412",
+   "event_title": "Restaurante Griego - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 4,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Jorge Garcia",
+   "name": "Jorge",
+   "event_id": "311584032",
+   "event_title": "Empanadas y Solomillos - Amigos Gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "311987414",
+   "event_title": "Pizza a la Napoletana - Amigos gays",
+   "age": "hace 11 meses",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "311508031",
+   "event_title": "Restaurante Ape Regina - Amigos Gays",
+   "age": "hace 1 año",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Derek",
+   "name": "Derek",
+   "event_id": "311704183",
+   "event_title": "Tomamos algo en Bloc 34 - Amigos Gays",
+   "age": "hace 1 año",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Antonio Rabanera",
+   "name": "Antonio",
+   "event_id": "311704183",
+   "event_title": "Tomamos algo en Bloc 34 - Amigos Gays",
+   "age": "hace 1 año",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "311480195",
+   "event_title": "Pizza a la Romana - Amigos gays",
+   "age": "hace 1 año",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ]
+  },
+  {
+   "author": "Daniel Lorca",
+   "name": "Daniel",
+   "event_id": "311375096",
+   "event_title": "Pizza a la Romana - Amigos gays",
+   "age": "hace 1 año",
+   "stars": 5,
+   "attributes": [
+    "Según lo descrito",
+    "Interesante",
+    "Dejó huella",
+    "Asistentes inclusivos",
+    "Contacto con personas nuevas",
+    "Entorno óptimo",
+    "Comienzo puntual",
+    "Sensación de seguridad",
+    "Organizador acogedor"
+   ],
+   "reply": "muchas gracias Dani por tu confianza! 😅 vamos a por muchos eventos más!!"
+  }
+ ]
+}

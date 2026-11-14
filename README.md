@@ -26,6 +26,7 @@ L'account Meetup verrà chiuso: tutto è salvato qui.
 - `data/events.json`: tutti gli eventi con descrizioni complete, luoghi, partecipanti (conteggio) e link alle foto.
 - `data/group_album.json`: elenco dell'album del gruppo.
 - `archive/photos/<id>.jpeg`: tutte le foto originali (copertine, album degli eventi, album del gruppo); `index.json` dice da dove viene ciascuna.
+- `archive/reviews/`: screenshot delle review (`group-<n>.png` per il gruppo, `<event_id>-<n>.png` per i feedback di ogni evento); `index.json` indica per ogni immagine pagina di origine, evento e data dello screenshot.
 
 ## Script
 - `scripts/export_meetup.py`: export completo degli eventi in `data/events.json`.

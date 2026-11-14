@@ -103,7 +103,9 @@ def main() -> int:
             if manifest.get(name) == key and (folder / name).exists():
                 continue
             try:
-                img = enhance(load(photo["src"]))
+                img = load(photo["src"])
+                if photo.get("enhance", True):  # le card grafiche non vanno corrette
+                    img = enhance(img)
                 # una foto orizzontale ritagliata a 4:5 perde le persone ai lati: la teniamo intera
                 use_cover = photo["fit"] == "cover" and img.width / img.height < 0.95
                 out = add_logo(cover(img) if use_cover else contain(img))

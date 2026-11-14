@@ -5,6 +5,7 @@ Pubblica su @la.mesa.arcoiris un post per ogni evento Meetup del gruppo, uno al 
 ## Come funziona
 - `data/posts.json`: coda dei post (didascalia, foto, `approved`, `status`). È la fonte di verità: si modifica qui.
 - `build.yml`: a ogni modifica di `posts.json` scarica le foto da Meetup e genera `images/<id>/<n>.jpg` (1080×1350).
+- Post review: ogni 4 post evento ne esce uno con le review di Meetup (voci `review-NN` di `posts.json`, con `kind: "review"`). I testi sono in `data/reviews.json`; le card in `review_cards/<id>/` le genera `scripts/build_review_cards.py`, da rieseguire a mano se cambiano. Dei recensori compare solo il nome.
 - `publish.yml`: ogni giorno alle 20:00 (Madrid), avviato da un'attività programmata di Claude; cron GitHub come riserva pubblica il prossimo post con `approved: true` e `status: pending`. Avviato a mano, di default fa solo un controllo (dry-run).
 
 ## Highlight
@@ -33,4 +34,5 @@ L'account Meetup verrà chiuso: tutto è salvato qui.
 - `scripts/make_posts.py`: generazione iniziale di `posts.json` (da non rieseguire: sovrascrive le modifiche).
 - `scripts/archive_meetup.py`: download delle foto originali in `archive/photos`.
 - `scripts/build_images.py`: conversione immagini (legge le foto dall'archivio).
+- `scripts/build_review_cards.py`: card dei post review.
 - `scripts/publish.py`: pubblicazione.

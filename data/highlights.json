@@ -497,7 +497,7 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "311915233",
@@ -505,8 +505,12 @@
      "https://secure.meetupstatic.com/photos/event/d/c/c/2/highres_531896514.jpeg",
      "https://secure.meetupstatic.com/photos/event/8/b/e/highres_531182238.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "17920982064453649",
+     "17976652098177677"
+    ],
+    "published_at": "2026-11-15T19:08:00+00:00"
    },
    {
     "id": "313774308",
@@ -516,7 +520,9 @@
     "status": "pending",
     "ig_story_ids": []
    }
-  ]
+  ],
+  "opening_story_id": "18137841115677375",
+  "opening_published_at": "2026-11-15T19:07:36+00:00"
  },
  {
   "venue": "bardaixa",

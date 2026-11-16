@@ -535,15 +535,18 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "311926396",
     "photos": [
      "https://secure.meetupstatic.com/photos/event/5/d/8/f/highres_531203951.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "17965379175216999"
+    ],
+    "published_at": "2026-11-16T19:07:53+00:00"
    },
    {
     "id": "314130257",
@@ -551,7 +554,9 @@
     "status": "none",
     "ig_story_ids": []
    }
-  ]
+  ],
+  "opening_story_id": "18119915575803329",
+  "opening_published_at": "2026-11-16T19:07:42+00:00"
  },
  {
   "venue": "bloc34",

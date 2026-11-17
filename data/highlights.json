@@ -701,17 +701,22 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "311926365",
     "photos": [
      "https://secure.meetupstatic.com/photos/event/5/d/0/6/highres_531203814.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "18104753477455107"
+    ],
+    "published_at": "2026-11-17T19:09:06+00:00"
    }
-  ]
+  ],
+  "opening_story_id": "18126231445900188",
+  "opening_published_at": "2026-11-17T19:08:54+00:00"
  },
  {
   "venue": "lacarra",

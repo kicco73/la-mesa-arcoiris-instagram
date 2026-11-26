@@ -791,17 +791,22 @@
   "approved": true,
   "status": "pending",
   "ig_story_ids": [],
-  "opening_published": false,
+  "opening_published": true,
   "events": [
    {
     "id": "312926014",
     "photos": [
      "https://secure.meetupstatic.com/photos/event/5/f/e/5/highres_532284549.jpeg"
     ],
-    "status": "pending",
-    "ig_story_ids": []
+    "status": "published",
+    "ig_story_ids": [
+     "18088806635326508"
+    ],
+    "published_at": "2026-11-26T19:07:24+00:00"
    }
-  ]
+  ],
+  "opening_story_id": "18501629380107072",
+  "opening_published_at": "2026-11-26T19:07:12+00:00"
  },
  {
   "venue": "leggenda",
